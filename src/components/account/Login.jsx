@@ -21,7 +21,6 @@ const Login = () => {
   const {
     register,
     handleSubmit,
-    watch,
     reset,
     formState: { isSubmitSuccessful, errors },
   } = useForm();

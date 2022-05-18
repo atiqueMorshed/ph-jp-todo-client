@@ -51,7 +51,7 @@ const AddTask = ({ refetch }) => {
 
   if (authLoading || isLoading) {
     return (
-      <div className="min-h-[calc(100vh-217px)] flex justify-center items-center">
+      <div className="min-h-[20vh] w-screen flex justify-center items-center">
         <Spinner />
       </div>
     );
@@ -68,7 +68,7 @@ const AddTask = ({ refetch }) => {
   }
 
   return (
-    <div>
+    <div className="mt-20">
       <label
         htmlFor="addTaskModal"
         className="btn modal-button"
