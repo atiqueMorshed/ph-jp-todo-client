@@ -6,13 +6,13 @@ import {
   useCreateUserWithEmailAndPassword,
   useUpdateProfile,
 } from 'react-firebase-hooks/auth';
-
-import auth from '../firebase.init';
-
-import Spinner from './Spinner';
-import ErrorPreview from './ErrorPreview';
-import GoogleLogin from './GoogleLogin';
 import { toast } from 'react-toastify';
+
+import auth from '../../firebase.init';
+
+import Spinner from '../shared/Spinner';
+import ErrorPreview from '../shared/ErrorPreview';
+import GoogleLogin from './GoogleLogin';
 
 const Register = () => {
   const [emailUserCreationError, setEmailUserCreationError] = useState();
@@ -32,6 +32,7 @@ const Register = () => {
 
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
+  // Redirects if user exists
   useEffect(() => {
     if (authUser) {
       navigate('/');
@@ -225,7 +226,7 @@ const Register = () => {
         </form>
         <div className="divider">OR</div>
         <div className="mt-6">
-          <GoogleLogin />
+          <GoogleLogin from="/" />
         </div>
       </div>
     </div>

@@ -1,13 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 
-import Footer from './components/Footer';
-import Login from './components/Login';
-import Navbar from './components/Navbar';
-import Register from './components/Register';
-import Title from './components/Title';
+import Footer from './components/shared/Footer';
+import Login from './components/account/Login';
+import Navbar from './components/shared/Navbar';
+import Register from './components/account/Register';
+import Title from './components/shared/Title';
 
 import 'react-toastify/dist/ReactToastify.css';
+import NotFound from './components/shared/NotFound';
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
             </>
           }
         />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
       <ToastContainer />

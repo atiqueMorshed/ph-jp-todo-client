@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
-import auth from '../firebase.init';
+import auth from '../../firebase.init';
 import Spinner from './Spinner';
 import { signOut } from 'firebase/auth';
 
