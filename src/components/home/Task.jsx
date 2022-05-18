@@ -24,6 +24,7 @@ const Task = ({ task: { name, description, completed, _id }, refetch }) => {
   };
   const updateSuccess = () => {
     toast.success('Successfully updated task status in DB.');
+    refetch();
   };
   const updateStatus = useUpdateTask({
     onError: updateError,
@@ -46,6 +47,7 @@ const Task = ({ task: { name, description, completed, _id }, refetch }) => {
             type="checkbox"
             className="checkbox"
             onClick={handleCompleted}
+            defaultChecked={isCompleted}
           />
         </label>
       </th>
