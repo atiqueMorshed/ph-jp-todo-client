@@ -7,7 +7,7 @@ import { useAddTask } from '../../Hooks/useAddTask';
 import ErrorPreview from '../shared/ErrorPreview';
 import Spinner from '../shared/Spinner';
 
-const AddTask = () => {
+const AddTask = ({ refetch }) => {
   const [showModal, setShowModal] = useState(false);
 
   const [authUser, authLoading] = useAuthState(auth);
@@ -19,6 +19,7 @@ const AddTask = () => {
   const onSuccess = () => {
     toast.success('Successfully added task.');
     setShowModal(false);
+    refetch();
   };
 
   const { isLoading, mutateAsync } = useAddTask({ onError, onSuccess });
@@ -73,7 +74,7 @@ const AddTask = () => {
         className="btn modal-button"
         onClick={() => setShowModal((prev) => !prev)}
       >
-        Add Task
+        Add a New Task
       </label>
 
       {showModal && (

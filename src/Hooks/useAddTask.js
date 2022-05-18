@@ -2,9 +2,8 @@ import { useMutation } from 'react-query';
 import axiosBaseUrl from '../api/axiosBaseUrl';
 
 const addTask = async (task) => {
-  console.log('IN ADDTASK', task);
   try {
-    const response = await axiosBaseUrl.post('/api/addTask', {
+    const response = await axiosBaseUrl.post('/api/task', {
       task,
     });
     return response.data;
