@@ -32,7 +32,7 @@ const Login = () => {
   // Redirects if user exists
   useEffect(() => {
     if (authUser) {
-      navigate(from);
+      navigate(from, { replace: true });
     }
   }, [authUser, navigate, from]);
 

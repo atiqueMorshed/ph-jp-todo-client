@@ -9,6 +9,8 @@ import Title from './components/shared/Title';
 
 import 'react-toastify/dist/ReactToastify.css';
 import NotFound from './components/shared/NotFound';
+import Home from './components/home/Home';
+import RequireAuth from './components/shared/RequireAuth';
 
 const App = () => {
   return (
@@ -18,9 +20,9 @@ const App = () => {
         <Route
           path="/"
           element={
-            <>
-              <Login />
-            </>
+            <RequireAuth>
+              <Home />
+            </RequireAuth>
           }
         />
         <Route
