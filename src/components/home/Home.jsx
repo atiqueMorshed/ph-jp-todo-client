@@ -33,7 +33,7 @@ const Home = () => {
   if (isSuccess) {
     return (
       <div
-        className={`min-h-[calc(100vh-217px)] w-[80%] max-w-11/12 mx-auto flex flex-col justify-center items-end gap-8 ${
+        className={`min-h-[calc(100vh-217px)] w-[80%] max-w-11/12 mx-auto flex flex-col justify-center items-end gap-8 mb-20 ${
           data?.length === 0 ? 'flex-col-reverse items-center' : ''
         }`}
       >
