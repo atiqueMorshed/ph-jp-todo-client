@@ -4,7 +4,7 @@ import GoogleLogin from './GoogleLogin';
 
 const Login = () => {
   return (
-    <div className="mt-20">
+    <div className="my-20">
       <div className="w-[300px] max-w-[90%] sm:w-[400px] mx-auto sm:px-10 sm:py-20 sm:border sm:rounded">
         <form className="flex flex-col justify-center">
           <h1 className="text-3xl font-medium mb-4 text-center">Login Now</h1>
